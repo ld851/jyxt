@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jzsec.gupiao.dao.IMarketDao">
+    <select id="queryByMarketID" resultType="com.jzsec.gupiao.entity.Market">
+        select * from market 
+        where marketcode=#{marketcode}
+    </select>
+    <update id="updateMarket" parameterType="com.jzsec.gupiao.entity.Market" >
+    	update market set status = #{status}, period = #{period}
+    	where marketcode = #{marketcode}
+    </update>
+</mapper>

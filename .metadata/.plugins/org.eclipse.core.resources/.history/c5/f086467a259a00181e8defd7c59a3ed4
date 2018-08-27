@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>世界杯竞猜</title>
+<!-- Bootstrap link -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- Bootstrap link  end-->
+<!-- CSS stylesheet -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" />
+<!-- CSS stylesheet end-->
+ <!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</script>
+<!-- Google fonts ends -->
+<script src="js/jquery.min.js"></script>
+<!-- FlexSlider -->
+<script defer src="js/jquery.flexslider.js"></script>
+<script src="js/modernizr.js"></script>
+<script type="text/javascript">
+        $(function(){
+			      SyntaxHighlighter.all();
+			    });
+			    $(window).load(function(){
+			      $('.flexslider').flexslider({
+			        animation: "slide",
+			        start: function(slider){
+			          $('body').removeClass('loading');
+			        }
+			      });
+			    });
+			  </script>
+</head>
+<body>
+		<!-- Header starts here -->
+			<div class="header">
+				<div class="container">
+					<div class="logo">
+						<a href="index.html"><img src="images/logo.png" /></a>
+					</div>
+					 <div class="menu">
+						<a class="toggleMenu" href="#"><img src="images/nav_icon.png" alt="" /> </a>
+								<ul class="nav" id="nav">
+									<li ><a href="login.html" class="scroll">登录</a></li>
+									<li ><a href="res.html" class="scroll">注册</a></li>
+								  <li class="current"><a href="#home" class="scroll">首页</a></li>
+								  <li><a href="about.html" class="scroll">比赛资料</a></li>
+								  <li><a href="portfolio.html" class="scroll">竞彩咨询</a></li>
+								  <li><a href="services.html" class="scroll">赛果开奖</a></li>
+								  <li><a href="contact.html" class="scroll">赛程直播</a></li>
+								 </ul>
+				     </div>
+				</div>
+			</div>
+		<!-- Header ends here -->
+		<!-- Banner starts here -->
+			<div class="banner">
+				<div class="container">
+						<div class="slider-background">
+						<section class="slider">
+					        <div class="flexslider">
+					          <ul class="slides">
+					            <li>
+					  	    	    <img src="images/slide_img.jpg" alt=""/>
+					  	    		</li>
+					  	    		<li>
+					  	    	    <img src="images/banner.jpg"  alt=""/>
+					  	    		</li>
+					  	    		<li>
+					  	    	    <img src="images/banner2.jpg"  alt=""/>
+					  	    		</li>
+					  	    		<li>
+					  	    	    <img src="images/banner3.jpg"  alt=""/>
+					  	    		</li>
+					          </ul>
+					        </div>
+					      </section>
+					      <div class="banner-below-content">
+					      	<h2>稳健选择，精准分析，尽在 <span>世界杯竞猜网</span> </h2>
+					      	<p>现在充值，满200送10</p>
+					      	<a href="#"><i>充值</i></a>
+					      	
+					      </div>
+					</div>
+				</div>
+			</div>
+		<!-- Banner ends here -->
+
+		<!-- Contents start here -->
+			<div class="content">
+				<div class="container">
+					<div class="content-row-class2">
+						<h3> 焦点赛事</h3>
+					</div>
+					<div class="row content-row-class3">
+						<div class="col-md-6 content-class3-column">
+							<div class="row class3-row">
+								<div class="col-md-6 class3-row-column">
+									<img src="images/kat.jpg" />
+								</div>
+								<div class="col-md-6 class3-row-column">
+									<h3>俄罗斯 VS 日本</h3>
+									<p>Aenean feugiat blandit velit, posuere condimentum felis dapibus id. </p>
+									<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Intaliquam mas.</p>
+									<a href="#">更多信息</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 content-class3-column">
+							<div class="row class3-row">
+								<div class="col-md-6 class3-row-column">
+									<img src="images/ema.jpg" />
+								</div>
+								<div class="col-md-6 class3-row-column">
+									<h3>比利时 VS 法国</h3>
+									<p>Aenean feugiat blandit velit, posuere condimentum felis dapibus id. </p>
+									<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Intaliquam mas.</p>
+									<a href="#">更多信息</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="testimonals">
+						<h3>testimonials of our clients</h3>
+						<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praese</p>
+					</div>
+					<div class="row testimonals-row">
+						<div class="col-md-4 testimonals-row-column">
+							<div class="testimonals-details">
+								<p class="test"></p>
+								
+								<p>"Aenean feugiat blandit velit, posuere icondimentum felis dapibus id. Cum sociis natoque penatibus etion tint coloreo"</p>
+							</div>
+							<p><span><a href="#">- John Doe</a></span> / Company Name </p>
+						</div>
+						<div class="col-md-4 testimonals-row-column">
+						<div class="testimonals-details">
+								<p class="test"></p>
+								<p>"Praesent ullamcorper nulla ultrices nibh rutrum, sed dapibus augue ornare esque convallis massa in elit cursus"</p>
+							</div>
+							<p><span><a href="#">- Amanda Doe</a></span> / Company Name </p>	
+						</div>
+						<div class="col-md-4 testimonals-row-column">
+							<div class="testimonals-details">
+								<p class="test"></p>
+								<p>"Duis ligula purus, molestie nec iaculis et, cursus vel risus. Sed est magna, ultricies sit amet elit et, ullamcorper susc"</p>
+							</div>
+							<p><span><a href="#">- Peter Doe</a> </span> / Company Name </p>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		<!-- Contents ends here -->
+		、
+
+</body>
+</html>

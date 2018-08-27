@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jzsec.webclient.dao.ISerialNoDao">
+    <select id="getSerialNoWithDate" resultType="com.jzsec.webclient.entity.SerialNo">
+        select * from serialno 
+        where serialtype = #{serialtype} and orderdate = #{orderdate}
+    </select>
+
+	<select id="getSerialNo" resultType="com.jzsec.webclient.entity.SerialNo" parameterType="String">
+		select * from serialno 
+		where serialtype = #{serialtype}
+	</select>
+
+    <update id="UpdateSerialNo" parameterType="com.jzsec.webclient.entity.SerialNo" >
+    	update serialno set orderdate = #{orderdate}, startno = #{startno},
+    		endno = #{endno},currno = #{currno}
+    	where serialtype = #{serialtype}
+    </update>
+</mapper>

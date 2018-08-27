@@ -1,0 +1,16 @@
+mybatis: 
+  mapperLocations: classpath*:mybatis/*mapper.xml
+  config: classpath:mybatis/mybatis-conf.xml
+  checkConfigLocation: false
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useSSL=false
+    username: root
+    password: ld85179471
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 8081
+kafka: 
+  server: 192.168.1.122:9092

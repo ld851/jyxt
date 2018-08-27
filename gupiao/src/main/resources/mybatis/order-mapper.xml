@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jzsec.gupiao.dao.IOrderDao">
+    <select id="queryByKey" resultType="com.jzsec.gupiao.entity.Order">
+        select * from stkorder 
+        where orderdate=#{orderdate} and orderid = #{orderid}
+    </select>
+
+	<select id="getOrdersByCustid" resultType="com.jzsec.gupiao.entity.Order" parameterType="String">
+		select * from stkorder 
+		where custid = #{custid}
+	</select>
+	<select id="getOrdersByDate" resultType="com.jzsec.gupiao.entity.Order" parameterType="String">
+		select * from stkorder
+		where orderdate = #{orderdate} and ordertype = 0
+		      and canceled = 0 and status = '1'
+	</select>
+	<select id="getBuyOrders" resultType="com.jzsec.gupiao.entity.Order" parameterType="String">
+		select * from stkorder
+		where orderdate = #{orderdate} and bsflag = '0B' and ordertype = 0
+			  and canceled = 0 and status = '1'
+		order by orderprice desc, ordertime asc
+	</select>
+	<select id="getSellOrders" resultType="com.jzsec.gupiao.entity.Order" parameterType="String">
+		select * from stkorder
+		where orderdate = #{orderdate} and bsflag = '0S' and ordertype = 0
+			  and canceled = 0 and status = '1'
+		order by orderprice asc, ordertime asc
+	</select>
+	<select id="getUnCompleteOrders" resultType="com.jzsec.gupiao.entity.Order" parameterType="String">
+		select * from stkorder
+		where orderdate = #{orderdate} and (bsflag = '0S' or bsflag ='0B')
+		      and ordertype = 0 and canceled = 0 
+		      and (status = '1' OR status = '3')
+		order by orderprice asc, ordertime asc
+	</select>
+    <insert id="addOrder" parameterType="com.jzsec.gupiao.entity.Order" >
+    	insert into stkorder(stkcode,bsflag,orderprice,orderqty,custid,orderid,canceled,cancelorderid,ordertype,addr,orderdate,ordertime,status,matchqty)
+    	values(#{stkcode},#{bsflag},#{orderprice},#{orderqty},#{custid},#{orderid},#{canceled},#{cancelorderid},#{ordertype},#{addr},#{orderdate},#{ordertime},#{status},#{matchqty})
+    </insert>
+    <update id="updateOrder" parameterType="com.jzsec.gupiao.entity.Order" >
+    	update stkorder set canceled = #{canceled}, status = #{status}, matchqty = #{matchqty}
+    	where orderdate = #{orderdate} and orderid = #{orderid}
+    </update>
+</mapper>

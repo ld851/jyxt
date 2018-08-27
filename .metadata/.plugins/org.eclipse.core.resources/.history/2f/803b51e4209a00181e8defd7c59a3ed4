@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Portfolio</title>
+<!-- Bootstrap link -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- Bootstrap link  end-->
+<!-- CSS stylesheet -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" />
+<!-- CSS stylesheet end-->
+ <!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</script>
+<!-- Google fonts ends -->
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+<!-- Header starts here -->
+			<div class="header">
+				<div class="container">
+					<div class="logo">
+						<a href="index.html"><img src="images/logo.png" /></a>
+					</div>
+					<div class="menu">
+						<a class="toggleMenu" href="#"><img src="images/nav_icon.png" alt="" /> </a>
+								<ul class="nav" id="nav">
+									<li ><a href="login.html" class="scroll">登录</a></li>
+									<li ><a href="res.html" class="scroll">注册</a></li>
+								  <li><a href="index.html" class="scroll">首页</a></li>
+								  <li><a href="about.html" class="scroll">比赛资料</a></li>
+								  <li class="current"><a href="portfolio.html" class="scroll">竞彩咨询</a></li>
+								  <li><a href="services.html" class="scroll">赛果开奖</a></li>
+								  <li><a href="contact.html" class="scroll">赛程直播</a></li>
+								 </ul>
+					</div>
+				</div>
+			</div>
+		<!-- Header ends here -->
+		<!-- Portfolio starts here -->
+		<div class="portfolio-start">
+		  <div class="container">
+			 <div class="content-top">
+				<div class="col_1_of_projects span_1_of_projects"><a href="#">
+				   <div class="view view-fourth">
+                    <img src="images/p1.jpg" class="img-responsive" />
+                    <div class="mask">
+                        <h2>李雪梅 #4</h2>
+                        <p>专家专家专家专家专家专家专家专家</p>
+                        <a href="#" class="info">Read More</a>
+                    </div>
+                </div>
+                </a> </div>
+				 <div class="col_1_of_projects span_1_of_projects"><a href="#">
+				   <div class="view view-fourth">
+                    <img src="images/p2.jpg" class="img-responsive" />
+                    <div class="mask">
+                        <h2>魏淑芬 #4</h2>
+                        <p>专家专家专家专家专家专家专家</p>
+                        <a href="#" class="info">Read More</a>
+                    </div>
+                </div>
+                </a> </div>
+				<div class="col_1_of_projects span_1_of_projects"><a href="#">
+				   <div class="view view-fourth">
+                    <img src="images/p3.jpg" class="img-responsive" />
+                    <div class="mask">
+                        <h2>赵匡胤 #4</h2>
+                        <p>专家专家专家专家专家专家专家</p>
+                        <a href="#" class="info">Read More</a>
+                    </div>
+                </div>
+                </a> </div>
+				<div class="col_1_of_projects span_1_of_projects"><a href="#">
+				   <div class="view view-fourth">
+                    <img src="images/p4.jpg" class="img-responsive" />
+                    <div class="mask">
+                        <h2>李乾 #4</h2>
+                        <p>专家专家专家专家专家</p>
+                        <a href="#" class="info">Read More</a>
+                    </div>
+                </div>
+                </a> </div>
+				<div class="clearfix"></div>
+		    </div>
+		    <div class="content-top">
+				<div class="col_1_of_projects span_1_of_projects"><a href="#">
+				   <div class="view view-fourth">
+                    <img src="images/p5.jpg" class="img-responsive" />
+                    <div class="mask">
+                        <h2>Hover Style #4</h2>
+                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                        <a href="#" class="info">Read More</a>
+                    </div>
+                </div>
+                </a> </div>
+				 <div class="col_1_of_projects span_1_of_projects"><a href="#">
+				   <div class="view view-fourth">
+                    <img src="images/p6.jpg" class="img-responsive" />
+                    <div class="mask">
+                        <h2>Hover Style #4</h2>
+                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                        <a href="#" class="info">Read More</a>
+                    </div>
+                </div>
+                </a> </div>
+				<div class="col_1_of_projects span_1_of_projects"><a href="#">
+				   <div class="view view-fourth">
+                    <img src="images/p7.jpg" class="img-responsive" />
+                    <div class="mask">
+                        <h2>Hover Style #4</h2>
+                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                        <a href="#" class="info">Read More</a>
+                    </div>
+                </div>
+                </a> </div>
+				<div class="col_1_of_projects span_1_of_projects"><a href="#">
+				   <div class="view view-fourth">
+                    <img src="images/p8.jpg" class="img-responsive" />
+                    <div class="mask">
+                        <h2>Hover Style #4</h2>
+                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                        <a href="#" class="info">Read More</a>
+                    </div>
+                </div>
+                </a> </div>
+				<div class="clearfix"></div>
+		    </div>
+				<div class="testimonals">
+						<h3>各界爱好者</h3>
+						<p>足球是世界的，听听来着世界的声音</p>
+					</div>
+					<div class="row testimonals-row">
+						<div class="col-md-4 testimonals-row-column">
+							<div class="testimonals-details">
+								<p class="test"></p>
+								
+								<p>"巴西队基本上赢了"</p>
+							</div>
+							<p><span><a href="#">- 王专家</a></span> / 资深评论员 </p>
+						</div>
+						<div class="col-md-4 testimonals-row-column">
+						<div class="testimonals-details">
+								<p class="test"></p>
+								<p>"姆巴佩是年轻球员中的一匹黑马"</p>
+							</div>
+							<p><span><a href="#">- 李专家</a></span> / 资深评论员 </p>
+						</div>
+						<div class="col-md-4 testimonals-row-column">
+							<div class="testimonals-details">
+								<p class="test"></p>
+								<p>"如果小组赛击败德国，冠军没问题"</p>
+							</div>
+							<p><span><a href="#">- 赵专家</a> </span> / 热血球迷 </p>
+						</div>
+					</div>
+				</div>
+		</div>
+
+</body>
+</html>

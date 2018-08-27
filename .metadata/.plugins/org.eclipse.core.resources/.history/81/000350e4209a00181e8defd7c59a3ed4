@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>比赛资料</title>
+<!-- Bootstrap link -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- Bootstrap link  end-->
+<!-- CSS stylesheet -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" />
+<!-- CSS stylesheet end-->
+ <!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</script>
+<!-- Google fonts ends -->
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+		<!-- Header starts here -->
+			<div class="header">
+				<div class="container">
+					<div class="logo">
+						<a href="index.html"><img src="images/logo.png" /></a>
+					</div>
+					<div class="menu">
+						<a class="toggleMenu" href="#"><img src="images/nav_icon.png" alt="" /> </a>
+								<ul class="nav" id="nav">
+									<li ><a href="login.html" class="scroll">登录</a></li>
+									<li ><a href="res.html" class="scroll">注册</a></li>
+								  <li><a href="index.html" class="scroll">首页</a></li>
+								  <li class="current"><a href="about.html" class="scroll">比赛资料</a></li>
+								  <li><a href="portfolio.html" class="scroll">竞彩咨询</a></li>
+								  <li><a href="services.html" class="scroll">赛果开奖</a></li>
+								  <li><a href="contact.html" class="scroll">赛程直播</a></li>
+								 </ul>
+					</div>
+				</div>
+			</div>
+		<!-- Header ends here -->
+		<!-- Aboutus starrts here -->
+		<div class="about-us">
+			<div class="container">
+				<div class="row about-us-row">
+					<div class="col-md-8 about-us-column">
+						<h2>巴西国家男子足球队</h2>
+						<div class="row few-words-row">
+							<div class="col-md-6 few-words-row-column">
+								<img src="images/about-us-pic.jpg" />
+							</div>
+							<div class="col-md-6 few-words-row-column">
+								<h4>桑巴之王——巴西足球队</h4>
+								<p>巴西队是参加联合会杯次数最多的球队，自从1997年以来，该队7次出战，其中在1997年、2005年及2009年、2013年4次夺魁，这同样是联合会杯的纪录，而且4次夺冠是在不同大洲，分别在中美的墨西哥、欧洲的德国以及非洲的南非、南美洲的巴西本土，桑巴军团还是联合会杯历史参加比赛最多（33场）、赢球最多（23场）以及进球最多（78粒）的球队。</p>
+							</div>
+							<p class="few-p">巴西国家男子足球队由巴西足球联盟负责管理，巴西足球联会建立于1914年，并于1924年加入国际足联。并代表巴西参加大型国际性足球A级赛事。因巴西国家队包揽了所有跟男子足球相关的奖项荣誉还保持各项记录以及巴西人民对足球的强烈热情，桑巴国度也诞生过无数的巨星，从而被全世界称之为“足球王国”。 [1]
+								巴西队战绩辉煌无比所向披靡，几乎是各大杯赛冠军数量领跑者，巴西队被誉为世界上最有名及最成功的国家足球队，他们是夺得世界杯足球赛冠军最多的球队，巴西队11次进入4强7次杀入决赛5次获得冠军，曾经于1958年、1962年、1970年、1994年、2002年5次夺得世界杯冠军。 [2]
+								1958年瑞典世界杯决赛中，巴西队以5：2大胜东道主瑞典队，获得冠军，成为史上第一支在欧洲获得世界杯冠军的美洲球队。巴西队曾经1994-2002连续3届杀进世界杯决赛，并获得2冠1亚的成绩创造了足坛历史。 [3]  1970年的巴西队更被国际足联评选为世界历史最佳球队。除世界杯外巴西联合会杯获得过4次冠军。是世界上获联合杯冠军最多的队伍，美洲杯获得过8次冠军，五星巴西队也是拥有球迷最多的队伍，在欧洲也拥有大批球迷追随。 [4]
+								2018年6月18日凌晨，2018年俄罗斯世界杯小组赛E组首轮，五星巴西被瑞士1:1逼平。 [5]  6月22日，第2轮，巴西2-0力克哥斯达黎加 [6]  。末轮以2-0塞尔维亚，以小组第一名晋级16强。2018年7月2日，俄罗斯世界杯淘汰赛正式打响，巴西2-0战胜墨西哥，闯入1/4决赛；7月6日，八强赛，巴西1-2不敌比利时，无缘半决赛。</p>
+						</div>
+					</div>
+					<div class="col-md-4 about-us-column ">
+						<h3>球队荣誉</h3>
+						<p class="ourvision">巴西是唯一一支参加了历届世界杯决赛圈的队伍</p>
+						<p class="ourvision1">联合会杯获得过4次冠军、1次亚军、1次殿军</p>
+						<p class="ourvision2">美洲杯巴西33次参加获得过8次冠军、11次亚军、7次季军、3次殿军</p>
+						<p class="ourvision3">世青杯获得过5次冠军、3次亚军、3次季军</p>
+						<p class="ourvision4">世界杯获得过5次冠军、2次亚军、2次季军、2次殿军</p>
+						<p class="ourvision5">2016年里约奥运会冠军</p>
+					</div>
+				</div>
+			</div>
+
+</body>
+</html>

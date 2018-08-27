@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="UTF-8" />
+
+  <title>委托下单</title>
+  <!-- Icons -->
+  <link href="css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="css/simple-line-icons.css" rel="stylesheet"/>
+
+  <!-- Main styles for this application -->
+  <link href="css/style1.css" rel="stylesheet"/>
+  <script src="js/libs/jquery.min.js"></script>
+  <script src="js/libs/tether.min.js"></script>
+  <script src="js/libs/bootstrap.min.js"></script>
+  <script src="js/libs/pace.min.js"></script>
+  <script type="text/javascript">
+	//<![CDATA[
+  	$(function(){
+  		$("#submit").click(function(){
+  			var logindata = $("#orderform").serialize();
+  			$.ajax({
+  				type:"POST",
+  				url:"/order",
+  				cache:false,
+  				data:logindata,
+  				success:function(json){
+  					var data = $.parseJSON(json);
+  					if (data.success == "true")
+  					{
+  						$("#msg").html("委托成功");
+  					}
+  					else
+  					{
+  						$("#msg").html("委托失败");
+  					}
+  				},
+  				error:function(json){
+  					alert(json.message);
+  				}
+  			});
+  			return false;
+  		})
+  		
+  	 	window.setInterval(function(){
+  	  		//获取行情
+  			var logindata = {"test":"test"};
+  			$.ajax({
+  	 				type:"GET",
+  	 				url:"/hq",
+  	 				cache:false,
+  	 				data:logindata,
+  	 				success:function(json){
+  	 					var data = $.parseJSON(json);
+  	 					var i = 2;
+  	 					for(var i = 0; i < 5; i++){
+  							$("#sell").find("tr").eq(i).find("td").eq(1).html(data.sell[4-i]);
+  							$("#buy").find("tr").eq(i).find("td").eq(1).html(data.buy[i]);
+  		 					$("#sell").find("tr").eq(i).find("td").eq(2).html(data.sellvolume[4-i]);
+  		 					$("#buy").find("tr").eq(i).find("td").eq(2).html(data.buyvolume[i]);  						
+  	 					}
+  	 				},
+  	 				error:function(json){
+  	 					alert(json);
+  	 				}
+  	 		});
+  	  		
+  	  	}, 2000);	
+  	});
+  //]]>
+  </script>
+</head>
+<body class="app">
+
+  <div class="app-body">
+
+    <!-- Main content -->
+    <main class="main">
+      <div class="container">
+      	<div class="row">
+      	<div class="col-4"></div>
+      	<div class="col-4" >
+        <form method="post" action='#' id="orderform"  class="card">
+        <div class="card-header">电量委托</div>
+		<div  class="form-group row">
+			<label for="radio" class="col-4 col-form-label">委托类型：</label>
+			<div class="col-8">
+			<label class="custom-control custom-radio">
+			  <input id="radio1" value="0" checked="checked" name="ordertype" type="radio" class="custom-control-input"/>
+			  <span class="custom-control-indicator"></span>
+			  <span class="custom-control-description">限价委托</span>
+			</label>
+			<label class="custom-control custom-radio">
+			  <input id="radio2" value="1" name="ordertype" type="radio" class="custom-control-input"/>
+			  <span class="custom-control-indicator"></span>
+			  <span class="custom-control-description">市价委托</span>
+			</label>
+			</div>
+		</div>
+      	
+  	    <div class="form-group row">
+  			<label for="stkcode" class="col-4 col-form-label">代码：</label>
+			<div class="col-8">
+			    <input type="text" class="form-control" name="stkcode" id="stkcode" placeholder="000001"/>
+			</div>
+		</div>
+  	    <div class="form-group row">
+  			<label for="orderprice" class="col-4 col-form-label">价格：</label>
+			<div class="col-8">
+			    <input type="text"  class="form-control" id="orderprice" name="orderprice"/>
+			</div>
+		</div>
+  	    <div class="form-group row">
+  			<label for="orderqty" class="col-4 col-form-label">数量：</label>
+			<div class="col-8">
+			    <input type="text" class="form-control" id="orderqty" name="orderqty"/>
+			</div>
+		</div>
+		<div  class="form-group row">
+			<label for="radio" class="col-4 col-form-label"></label>
+			<div class="col-8">
+			<label class="custom-control custom-radio">
+			  <input id="bsflag1" value="0B" checked="checked" name="bsflag" type="radio" class="custom-control-input"/>
+			  <span class="custom-control-indicator"></span>
+			  <span class="custom-control-description">买</span>
+			</label>
+			<label class="custom-control custom-radio">
+			  <input id="bsfla2" VALUE="0S" name="bsflag" type="radio" class="custom-control-input"/>
+			  <span class="custom-control-indicator"></span>
+			  <span class="custom-control-description">卖</span>
+			</label>
+			</div>
+		</div>
+		<div id="msg"></div>
+		<button id="submit" type="submit" class="btn btn-primary">提交</button>
+
+      	</form>
+      	</div>
+      	<div class="col-4">
+      		<div class="row">
+      			<div class="col-6">
+      				<span>当前价</span><span id="currprice">0.00</span>
+      			</div>
+      			<div class="col-6">
+      				<span>开盘价</span><span id="openprice">0.00</span>
+      			</div>
+      		</div>
+      		<div class="row">
+	      		<table id="sell" class="table">
+	      			<tbody>
+	      			<tr><td>卖五</td><td>19.0</td><td>100</td></tr>
+	      			<tr><td>卖四</td><td>15.0</td><td>100</td></tr>
+	      			<tr><td>卖三</td><td>14.0</td><td>100</td></tr>
+	      			<tr><td>卖二</td><td>13.0</td><td>100</td></tr>
+	      			<tr><td>卖一</td><td>12.0</td><td>100</td></tr>
+	      			</tbody>
+	      		</table>
+	      		<td height="2px"><hr style="height:12px; background:#ddd;" /></td>
+	      		<table id="buy" class="table">
+	      			<tbody>
+	      			<tr><td>买一</td><td>11.0</td><td>100</td></tr>
+	      			<tr><td>买二</td><td>10.0</td><td>100</td></tr>
+	      			<tr><td>买三</td><td>9.0</td><td>100</td></tr>
+	      			<tr><td>买四</td><td>8.0</td><td>100</td></tr>
+	      			<tr><td>买五</td><td>7.0</td><td>100</td></tr>
+	      			</tbody>
+	      		</table>
+      		</div>
+      	</div>
+      	</div>
+      </div>
+    </main>
+
+  </div>
+  <!-- Bootstrap and necessary plugins -->
+
+
+  <!-- Main scripts -->
+  <script th:src="@{js/app.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jzsec.gupiao.dao.IMatchDao">
+    <select id="queryByCustid" resultType="com.jzsec.gupiao.entity.Match">
+        select * from stkmatch 
+        where orderdate=#{matchdate} and orderid = #{custid}
+    </select>
+    <insert id="addMatch" parameterType="com.jzsec.gupiao.entity.Match" >
+    	insert into 
+    	stkmatch(matchdate, matchtime,orderdate,orderid,matchprice,matchqty,custid)
+    	values(#{matchdate}, #{matchtime},#{orderdate},#{orderid},#{matchprice},#{matchqty},#{custid})
+    </insert>
+
+</mapper>

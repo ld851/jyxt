@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <!-- Bootstrap link -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Bootstrap link  end-->
+    <!-- CSS stylesheet -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" />
+    <!-- CSS stylesheet end-->
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    </script>
+    <!-- Google fonts ends -->
+    <script src="js/jquery.min.js"></script>
+    <style>
+        .wrap {
+            width: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 5px #ccc;
+        }
+    </style>
+</head>
+<body>
+<!-- Header starts here -->
+<div class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" /></a>
+        </div>
+        <div class="menu">
+            <a class="toggleMenu" href="#"><img src="images/nav_icon.png" alt="" /> </a>
+            <ul class="nav" id="nav">
+                <li ><a href="login.html" class="scroll">登录</a></li>
+                <li class="current"><a href="res.html" class="scroll">注册</a></li>
+                <li><a href="index.html" class="scroll">首页</a></li>
+                <li ><a href="about.html" class="scroll">比赛资料</a></li>
+                <li><a href="portfolio.html" class="scroll">竞彩咨询</a></li>
+                <li><a href="services.html" class="scroll">赛果开奖</a></li>
+                <li><a href="contact.html" class="scroll">赛程直播</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Header ends here -->
+<!-- Aboutus starrts here -->
+<div class="wrap">
+
+    <h2 style="text-align: center;background: rgba(233, 90, 98, 0.6);color: #fff;font-size: 30px;line-height: 60px;margin: 0;">注册</h2>
+
+    <div>
+        <div class="col-md-12">
+            <form class="form-horizontal templatemo-container templatemo-login-form-1" role="form" action="#" method="post">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <div class="control-wrapper">
+                            <label for="username" class="control-label fa-label"><i class="fa fa-user fa-medium"></i></label>
+                            <input type="text" class="form-control" id="username" placeholder="请输入手机号">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <div class="control-wrapper" style="margin-top: 0;">
+                            <label for="password" class="control-label fa-label"><i class="fa fa-lock fa-medium"></i></label>
+                            <input type="password" class="form-control" id="password" placeholder="请输入密码">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top: 30px;">
+                    <div class="col-md-12" style="text-align: center;">
+                        <input id="res" style="width: 100%;" type="submit" value="注册" class="btn btn-info">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    var res = document.getElementById("res");
+    res.onclick = function () {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var mobile = /^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\d{8}$/;
+        if (!username.match(mobile)) {
+            alert("手机号格式不正确，请重新输入");
+            return false;
+        }
+        if (!password) {
+            alert("用户名和密码不能为空！");
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
